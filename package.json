@@ -13,7 +13,7 @@
   "license": "MIT",
   "homepage": "http://thooams.github.io/Ui-Bibz/",
   "dependencies": {
-    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap": "^5.0.0-alpha2",
     "bootstrap-icons": "^1.0.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap-multiselect": "^0.9.15",
@@ -22,6 +22,7 @@
     "bootstrap-select": "^1.13.18",
     "multiselect": "^0.9.12",
     "bootstrap-markdown": "^2.10.0",
-    "awesome-bootstrap-checkbox": "^1.0.1"
+    "awesome-bootstrap-checkbox": "^1.0.1",
+    "jquery": "^3.5.1"
   }
 }

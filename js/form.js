@@ -1,17 +1,19 @@
 import UiBibzFormula from './formula'
 import bootstrapSwitch from 'bootstrap-switch'
+import $ from "jquery"
 //import 'bootstrap-switch/dist/js/bootstrap-switch'
+//u
 console.log(bootstrapSwitch)
 
 export default class UiBibzForm {
 
   constructor() {
-    // if(document.querySelector('input.switch-field')){ this.bootstrapSwitchField() }
+    if(document.querySelector('input.switch-field')){ this.bootstrapSwitchField() }
     // if(document.querySelector('.ui-bibz-connect')) { this.inputConnected() }
     // if(document.querySelector('.dropdown-select-field')) { this.selectPicker() }
     // if(document.querySelector('.multi-select-field')){ this.multiSelect() }
     // if(document.querySelector('.multi-column-field')){ this.multiColumn() }
-    // if(document.querySelector('.formula-field')){ this.formula() }
+    if(document.querySelector('.formula-field')){ this.formula() }
     // if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
   }
 
@@ -80,7 +82,7 @@ export default class UiBibzForm {
     }
     if (isNaN(response)) {
       formulaSignField.attr('style', 'display: table-cell')
-      formulaResultField.attr('style', 'display: table-cell visible: visible')
+      formulaResultField.attr('style', 'display: table-cell; visible: visible')
       formulaInputField.addClass('fix-border-right')
     } else {
       formulaSignField.hide()

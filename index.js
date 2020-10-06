@@ -11,7 +11,6 @@ export default class UiBibzJs {
   }
 
   init(){
-    console.log('toto')
     new UiBibzTable()
     new UiBibzForm()
     new UiBibzInterface()

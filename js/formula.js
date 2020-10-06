@@ -1,16 +1,16 @@
 // http://www.developpez.net/forums/d940195-2/webmasters-developpement-web/general-conception-web/contribuez/eval-calcul-risque/
-class Formula {
-  static initClass() {
+export default class Formula {
 
-    this.prototype.res = '';
+  constructor(){
+    this.res = ""
 
-    this.prototype.t = {
+    this.t = {
       x: "*",
       X: "*",
       ":": "/"
     };
 
-    this.prototype.rg = {
+    this.rg = {
       "/[^\\+\\*\\/\\-\\(\\)\\s\\d\\.]/": "It is not a number",
       "/[\\+\\*\\/\\-\\(]\\)/": "Parenthesis ending with a incorrect expression.",
       "/([\\+\\x\\*\\/\\-]{2,})|([\\+\\x\\*\\/\\-]\\s[\\+\\x\\*\\/\\-])/i": "Multiple Operators in a row.",
@@ -20,7 +20,7 @@ class Formula {
       "/^[\\*\\/]+/": "First operator within string is wrong"
     };
 
-    this.prototype.rg2 = {
+    this.rg2 = {
       "/\\s+/g": " ",
       "/([^\\.\\,\\;\\d]|^)0+([\\,\\.\\;\\d])/g": "$10$2",
       "/[,;]/g": ".",
@@ -80,4 +80,3 @@ class Formula {
     return [me.res, finalvalue];
   }
 }
-export default Formula.initClass();
