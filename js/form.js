@@ -15,6 +15,7 @@ export default class UiBibzForm {
     // if(document.querySelector('.multi-column-field')){ this.multiColumn() }
     if(document.querySelector('.formula-field')){ this.formula() }
     // if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
+    if(document.querySelector('.slider')){ this.doubleSlider() }
   }
 
   inputConnected() {
@@ -107,6 +108,47 @@ export default class UiBibzForm {
           $(this).css("border-top-right-radius", radius)
         }
       }
+    })
+  }
+
+  doubleSlider(){
+    document.querySelectorAll(".slider").forEach(function(e){
+      let slider   = e
+      let sliderId = slider.getAttribute("id")
+      let sliderMin = document.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-min span`)
+      let sliderMax = document.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-max span`)
+      let rangeInput1 = slider.querySelectorAll("input[type=range]")[0]
+      let rangeInput2 = slider.querySelectorAll("input[type=range]")[1]
+      let inverseLeft = slider.querySelector(".slider-inverse-left")
+      let inverseRight = slider.querySelector(".slider-inverse-right")
+      let range = slider.querySelector(".slider-range")
+      let thumbLeft = slider.querySelector(".slider-thumb-left")
+      let thumbRight = slider.querySelector(".slider-thumb-right")
+      let signLeft = slider.querySelector(".slider-sign-left")
+      let signRight = slider.querySelector(".slider-sign-right")
+
+
+      rangeInput1.addEventListener("input", function(e){
+        this.value = Math.min(this.value, rangeInput2.value-1)
+        let value = (100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min)
+        value = value +  0.01 * value
+
+        inverseLeft.style.width = `${value}%`
+        range.style.left = `${value}%`
+        thumbLeft.style.left = `${value}%`
+        if(sliderMin){ sliderMin.innerHTML = this.value }
+      })
+
+      rangeInput2.addEventListener("input", function(e){
+        this.value = Math.max(this.value,rangeInput1.value-(-1))
+        let value = (100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min)
+        value = value +  0.01 * value
+
+        inverseRight.style.width = `${100-value}%`
+        range.style.right = `${100-value}%`
+        thumbRight.style.left= `${value}%`
+        if(sliderMax){ sliderMax.innerHTML = this.value }
+      })
     })
   }
 }
