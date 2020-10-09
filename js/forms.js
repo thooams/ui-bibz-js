@@ -1,6 +1,10 @@
-import UiBibzFormula from './formula'
+import UiBibzFormula from './forms/formula'
 import bootstrapSwitch from 'bootstrap-switch'
+import selectpicker from 'bootstrap-select'
+import inputConnected from "./forms/input-connected"
 import $ from "jquery"
+import multiselect from "./forms/multiselect"
+import extendMultiselect from "./forms/jquery.multi-select-extend"
 //import 'bootstrap-switch/dist/js/bootstrap-switch'
 //u
 console.log(bootstrapSwitch)
@@ -9,10 +13,10 @@ export default class UiBibzForm {
 
   constructor() {
     if(document.querySelector('input.switch-field')){ this.bootstrapSwitchField() }
-    // if(document.querySelector('.ui-bibz-connect')) { this.inputConnected() }
-    // if(document.querySelector('.dropdown-select-field')) { this.selectPicker() }
+    if(document.querySelector('.ui-bibz-connect')) { this.inputConnected() }
+    if(document.querySelector('.dropdown-select-field')) { this.selectPicker() }
     // if(document.querySelector('.multi-select-field')){ this.multiSelect() }
-    // if(document.querySelector('.multi-column-field')){ this.multiColumn() }
+    if(document.querySelector('.multi-column-field')){ this.multiColumn() }
     if(document.querySelector('.formula-field')){ this.formula() }
     // if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
     if(document.querySelector('.slider')){ this.doubleSlider() }
@@ -93,6 +97,7 @@ export default class UiBibzForm {
   }
 
   multiColumn() {
+    $.fn.multiSelect.defaults = extendMultiselect
     $(".multi-column-field").multiSelect()
   }
 

@@ -1,5 +1,6 @@
-(function() {
-  $.fn.multiSelect.defaults = {
+import quicksearch from "./jquery.quicksearch"
+
+export default {
     qs1: null,
     qs2: null,
     selectableOptgroup: false,
@@ -48,6 +49,4 @@
         return this.qs2.cache();
       }
     }
-  };
-
-}).call(this);
+}

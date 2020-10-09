@@ -1,6 +1,6 @@
-import UiBibzInterface from './js/interface'
-import UiBibzForm from './js/form'
-import UiBibzTable from './js/table'
+import UiBibzInterfaces from './js/interfaces'
+import UiBibzForms from './js/forms'
+import UiBibzTables from './js/tables'
 
 export default class UiBibzJs {
 
@@ -11,8 +11,8 @@ export default class UiBibzJs {
   }
 
   init(){
-    new UiBibzTable()
-    new UiBibzForm()
-    new UiBibzInterface()
+    new UiBibzTables()
+    new UiBibzForms()
+    new UiBibzInterfaces()
   }
 }

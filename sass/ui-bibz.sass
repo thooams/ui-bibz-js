@@ -4,21 +4,22 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts'
 @import '~@fortawesome/fontawesome-free/scss/fontawesome'
 @import '~@fortawesome/fontawesome-free/scss/solid'
 @import '~@fortawesome/fontawesome-free/scss/regular'
-@import '_custom_variables'
-@import "bootstrap-switch"
+@import "bootstrap-select/dist/css/bootstrap-select.min"
+@import "multiselect/css/multi-select.css"
 
 //@import jquery-ui.min
 
 $states_colors: $theme-colors
 
 // Components
-@import containers
-@import tables
-@import forms
-@import navigations
-@import notifications
-@import boxes
-@import fix_addon
+@import _boxes
+@import _containers
+@import _fix_addon
+@import _fixes
+@import _forms
+@import _navigations
+@import _notifications
+@import _tables
 
 // Other section
 .ui-bibz-clear
