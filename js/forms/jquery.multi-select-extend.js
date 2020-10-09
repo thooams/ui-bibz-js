@@ -1,4 +1,4 @@
-import quicksearch from "./jquery.quicksearch"
+import quicksearch from "../../vendors/js/jquery.quicksearch"
 
 export default {
     qs1: null,

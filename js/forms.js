@@ -3,7 +3,7 @@ import bootstrapSwitch from 'bootstrap-switch'
 import selectpicker from 'bootstrap-select'
 import inputConnected from "./forms/input-connected"
 import $ from "jquery"
-import multiselect from "./forms/multiselect"
+import multiselect from "../vendors/js/multiselect"
 import extendMultiselect from "./forms/jquery.multi-select-extend"
 //import 'bootstrap-switch/dist/js/bootstrap-switch'
 //u
