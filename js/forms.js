@@ -1,12 +1,14 @@
 import UiBibzFormula from './forms/formula'
 import bootstrapSwitch from 'bootstrap-switch'
-import selectpicker from 'bootstrap-select'
+//import selectpicker from 'bootstrap-select'
+import selectpicker from '../vendors/js/bootstrap-select'
 import inputConnected from "./forms/input-connected"
 import $ from "jquery"
 import multiSelect from "../vendors/js/multiselect"
 import multiselect from "../vendors/js/bootstrap-multiselect"
 import extendMultiselect from "./forms/jquery.multi-select-extend"
-//import 'bootstrap-switch/dist/js/bootstrap-switch'
+import markdown from "bootstrap-markdown/js/bootstrap-markdown"
+import 'bootstrap-switch/dist/js/bootstrap-switch'
 //u
 console.log(bootstrapSwitch)
 
