@@ -1,6 +1,4 @@
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
-//import "awesome-bootstrap-checkbox"
-//import { Popover, Tooltip, Toast, Dropdown } from "bootstrap"
 
 export default class UiBibzInterface {
 
@@ -8,10 +6,8 @@ export default class UiBibzInterface {
     // //this.nav()
     this.tooltip()
     // this.dropdown()
-    // //this.checkbox()
     this.popover()
     this.notify()
-    // this.fileInputBrowser()
     // this.toast()
   }
 
@@ -23,10 +19,6 @@ export default class UiBibzInterface {
         tabTrigger.show()
       })
     })
-  }
-
-  fileInputBrowser() {
-    //bsCustomFileInput.init()
   }
 
   popover() {
@@ -52,17 +44,4 @@ export default class UiBibzInterface {
       }, alertElement.getAttribute("data-timeout") )
     })
   }
-
-  // checkbox() {
-  //   $('.abc-checkbox.indeterminate input[type=checkbox]').on('click', function() {
-  //     let el = $(this)
-  //     if (el.attr('readonly') === 'readonly') {
-  //       el.prop('checked', false)
-  //       el.prop('readonly', false)
-  //     } else if (!el.is(':checked')) {
-  //       el.prop('readonly', true)
-  //       el.prop('indeterminate', true)
-  //     }
-  //   })
-  // }
 }
