@@ -715,9 +715,5 @@ var multi$;
 	});
     };
     multi$ = $;
-})(jQuery);
-
-
-
-
+  })(jQuery);
 }));

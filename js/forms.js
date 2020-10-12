@@ -3,7 +3,8 @@ import bootstrapSwitch from 'bootstrap-switch'
 import selectpicker from 'bootstrap-select'
 import inputConnected from "./forms/input-connected"
 import $ from "jquery"
-import multiselect from "../vendors/js/multiselect"
+import multiSelect from "../vendors/js/multiselect"
+import multiselect from "../vendors/js/bootstrap-multiselect"
 import extendMultiselect from "./forms/jquery.multi-select-extend"
 //import 'bootstrap-switch/dist/js/bootstrap-switch'
 //u
@@ -12,11 +13,11 @@ console.log(bootstrapSwitch)
 export default class UiBibzForm {
 
   constructor() {
-    if(document.querySelector('input.switch-field')){ this.bootstrapSwitchField() }
+    if(document.querySelector('input.switch-field')){ this.setBootstrapSwitch() }
     if(document.querySelector('.ui-bibz-connect')) { this.inputConnected() }
-    if(document.querySelector('.dropdown-select-field')) { this.selectPicker() }
-    // if(document.querySelector('.multi-select-field')){ this.multiSelect() }
-    if(document.querySelector('.multi-column-field')){ this.multiColumn() }
+    if(document.querySelector('.dropdown-select-field')) { this.setSelectPicker() }
+    if(document.querySelector('.multi-select-field')){ this.setMultiSelect() }
+    if(document.querySelector('.multi-column-field')){ this.setMultiColumn() }
     if(document.querySelector('.formula-field')){ this.formula() }
     // if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
     if(document.querySelector('.slider')){ this.doubleSlider() }
@@ -26,17 +27,17 @@ export default class UiBibzForm {
     $('.ui-bibz-connect').inputConnected()
   }
 
-  selectPicker() {
+  setSelectPicker() {
     $('select.dropdown-select-field').selectpicker()
   }
 
-  bootstrapSwitchField() {
+  setBootstrapSwitch() {
     $('input.switch-field').bootstrapSwitch({
       size: 'large'
     })
   }
 
-  multiSelect() {
+  setMultiSelect() {
     $('.multi-select-field').each(function() {
       var classes, data
       data = $(this).data()
@@ -96,7 +97,7 @@ export default class UiBibzForm {
     }
   }
 
-  multiColumn() {
+  setMultiColumn() {
     $.fn.multiSelect.defaults = extendMultiselect
     $(".multi-column-field").multiSelect()
   }
