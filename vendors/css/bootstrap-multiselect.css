@@ -33,10 +33,6 @@ span.multiselect-native-select select {
   margin-right: 10px
 }
 
-.multiselect-container>li:not(.multiselect-filter) {
-  padding-left: 20px
-}
-
 .multiselect-container>li>a.multiselect-all label {
   font-weight: 700
 }
