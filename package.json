@@ -3,7 +3,7 @@
   "version": "0.9.1",
   "description": "Javascript for Ui Bibz",
   "main": "index.js",
-  "private": true,
+  "private": false,
   "scripts": {},
   "repository": {
     "type": "git",
