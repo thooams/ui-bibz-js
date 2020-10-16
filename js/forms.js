@@ -1,10 +1,10 @@
 import UiBibzFormula from './forms/formula'
 import bootstrapSwitch from 'bootstrap-switch'
-import selectpicker from '../vendors/js/bootstrap-select'
+import selectpicker from '../vendor/js/bootstrap-select'
 import inputConnected from "./forms/input-connected"
 import $ from "jquery"
-import multiSelect from "../vendors/js/multiselect"
-import multiselect from "../vendors/js/bootstrap-multiselect"
+import multiSelect from "../vendor/js/multiselect"
+import multiselect from "../vendor/js/bootstrap-multiselect"
 import extendMultiselect from "./forms/jquery.multi-select-extend"
 import markdown from "bootstrap-markdown/js/bootstrap-markdown"
 import "bootstrap-datepicker"
@@ -118,7 +118,7 @@ export default class UiBibzForm {
 
   doubleSlider(){
     document.querySelectorAll(".slider").forEach(function(e){
-      let slider   = e
+      let slider = e
       let sliderId = slider.getAttribute("id")
       let sliderMin = document.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-min span`)
       let sliderMax = document.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-max span`)
@@ -131,7 +131,6 @@ export default class UiBibzForm {
       let thumbRight = slider.querySelector(".slider-thumb-right")
       let signLeft = slider.querySelector(".slider-sign-left")
       let signRight = slider.querySelector(".slider-sign-right")
-
 
       rangeInput1.addEventListener("input", function(e){
         this.value = Math.min(this.value, rangeInput2.value-1)
