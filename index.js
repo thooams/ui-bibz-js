@@ -16,3 +16,7 @@ export default class UiBibzJs {
     new UiBibzInterfaces()
   }
 }
+export function start(){
+  let uiBibzJs = new UiBibzJs
+  uiBibzJs.start()
+}
