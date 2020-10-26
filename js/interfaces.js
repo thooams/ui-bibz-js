@@ -1,5 +1,3 @@
-import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
-
 export default class UiBibzInterface {
 
   constructor() {
