@@ -1,6 +1,3 @@
-//  import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
-// Fix bootstrap error: Cannot read property 'hasAttribute' of null
-import "./vendor/js/bootstrap.bundle"
 import UiBibzInterfaces from './js/interfaces'
 import UiBibzForms from './js/forms'
 import UiBibzTables from './js/tables'

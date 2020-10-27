@@ -1,3 +1,6 @@
+//  import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
+// Fix bootstrap error: Cannot read property 'hasAttribute' of null
+import bootstrap from "../vendor/js/bootstrap.bundle"
 export default class UiBibzInterface {
 
   constructor() {
