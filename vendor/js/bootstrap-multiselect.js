@@ -450,10 +450,10 @@
            ul: '<ul class="multiselect-container dropdown-menu"></ul>',
            filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><input class="form-control multiselect-search" type="text" /></div></li>',
            filterClearBtn: '',
-           li: '<li><a tabindex="0"><label></label></a></li>',
+           li: '<li class="dropdown-item"><a tabindex="0"><label></label></a></li>',
            divider: '<li class="multiselect-item divider"></li>',
            liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>',
-           resetButton: '<li class="multiselect-reset text-center"><div class="input-group"><a class="btn btn-default btn-block"></a></div></li>'
+           resetButton: '<li class="multiselect-reset text-center"><div class="input-group"><a class="btn btn-block"></a></div></li>'
          }
        },
 
