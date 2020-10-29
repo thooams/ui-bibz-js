@@ -1,6 +1,5 @@
 import UiBibzFormula from './forms/formula'
 import bootstrapSwitch from 'bootstrap-switch'
-import selectpicker from '../vendor/js/bootstrap-select'
 import inputConnected from "./forms/input-connected"
 import $ from "jquery"
 import multiSelect from "../vendor/js/multiselect"
@@ -18,7 +17,7 @@ export default class UiBibzForm {
     if(document.querySelector('.multi-select-field')){ this.setMultiSelect() }
     if(document.querySelector('.multi-column-field')){ this.setMultiColumn() }
     if(document.querySelector('.formula-field')){ this.formula() }
-    // if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
+    if(document.querySelector('.auto-complete-field')){ this.autoCompleteFix() }
     if(document.querySelector('.slider')){ this.doubleSlider() }
   }
 
