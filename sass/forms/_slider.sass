@@ -111,3 +111,10 @@ div.slider
 .slider.disabled > div > .slider-thumb, .slider.disabled > div > .slider-range
   background-color: $gray-500
 
+@each $color, $value in $theme-colors
+  .slider-#{$color}
+    & > div
+      & > .slider-range
+        background-color: $value
+      & > .slider-thumb
+        background-color: $value
