@@ -1,6 +1,6 @@
 {
   "name": "ui-bibz-js",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Javascript for Ui Bibz",
   "main": "index.js",
   "private": false,

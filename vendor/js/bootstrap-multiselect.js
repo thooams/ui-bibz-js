@@ -498,6 +498,13 @@
            });
          }
 
+         let classes = this.$select.attr("data-wrapper-classes")
+
+         if(classes){
+           this.$container.removeClass("btn-group")
+           this.$container.addClass(classes)
+         }
+
          // Keep the tab index from the select.
          var tabindex = this.$select.attr('tabindex');
          if (tabindex) {
