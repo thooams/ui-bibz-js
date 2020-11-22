@@ -12,3 +12,13 @@
 .without-caret
   .dropdown-toggle::after
     content: none
+
+.ui_surround_field .multiselect-native-select .multiselect
+  border-radius: 0px
+
+// .ui_surround_field .multiselect-native-select .multiselect
+.ui_surround_field .multiselect-native-select:first-child .multiselect
+  @include border-left-radius($border-radius)
+
+.ui_surround_field .multiselect-native-select:last-child .multiselect
+  @include border-right-radius($border-radius)
