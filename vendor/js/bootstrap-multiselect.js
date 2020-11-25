@@ -464,6 +464,7 @@
         */
        buildContainer: function() {
          this.$container = $(this.options.buttonContainer);
+         this.$container.addClass(this.$select.data().dropdownClasses) // Add by Thomas
          this.$container.on('show.bs.dropdown', this.options.onDropdownShow);
          this.$container.on('hide.bs.dropdown', this.options.onDropdownHide);
          this.$container.on('shown.bs.dropdown', this.options.onDropdownShown);
@@ -521,6 +522,10 @@
 
          // Build ul.
          this.$ul = $(this.options.templates.ul);
+
+         // Add by Thomas
+         let menuClasses = this.$select.data().dropdownMenuClasses
+         this.$ul.addClass(menuClasses)
 
          if (this.options.dropRight) {
            this.$ul.addClass('pull-right');
