@@ -254,7 +254,7 @@ $panel-columns-margin:               $panel-spacer-y !default;
       // Handle rounded corners
       @if $enable-rounded {
         &:first-child {
-          @include border-right-radius(0);
+          @include border-end-radius(0);
 
           .panel-img-top,
           .panel-header {
@@ -267,7 +267,7 @@ $panel-columns-margin:               $panel-spacer-y !default;
         }
 
         &:last-child {
-          @include border-left-radius(0);
+          @include border-start-radius(0);
 
           .panel-img-top,
           .panel-header {
