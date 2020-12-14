@@ -1,6 +1,4 @@
-//  import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
-// Fix bootstrap error: Cannot read property 'hasAttribute' of null
-import bootstrap from "../vendor/js/bootstrap.bundle"
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
 export default class UiBibzInterface {
 
   constructor() {
@@ -23,15 +21,15 @@ export default class UiBibzInterface {
   }
 
   popover() {
-    document.querySelectorAll('[data-toggle="popover"]').forEach(x => new bootstrap.Popover(x))
+    document.querySelectorAll('[data-bs-toggle="popover"]').forEach(x => new bootstrap.Popover(x))
   }
 
   tooltip() {
-    document.querySelectorAll('[data-toggle="tooltip"]').forEach(x => new bootstrap.Tooltip(x))
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(x => new bootstrap.Tooltip(x))
   }
 
   dropdown() {
-    document.querySelectorAll('[data-toggle="dropdown"]').forEach(x => new bootstrap.Dropdown(x))
+    document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(x => new bootstrap.Dropdown(x))
   }
 
   toast() {
