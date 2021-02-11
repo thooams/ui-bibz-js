@@ -13,7 +13,7 @@ export default class UiBibzForm {
   constructor() {
     if(document.querySelector('input.switch-field')){ this.setBootstrapSwitch() }
     if(document.querySelector('.ui-bibz-connect')) { this.inputConnected() }
-    if(document.querySelector('.dropdown-select-field')) { this.setSelectPicker() }
+    //if(document.querySelector('.dropdown-select-field')) { this.setMultiSelect() }
     if(document.querySelector('.multi-select-field')){ this.setMultiSelect() }
     if(document.querySelector('.multi-column-field')){ this.setMultiColumn() }
     if(document.querySelector('.formula-field')){ this.formula() }
@@ -25,9 +25,9 @@ export default class UiBibzForm {
     $('.ui-bibz-connect').inputConnected()
   }
 
-  setSelectPicker() {
-    $('select.dropdown-select-field').selectpicker()
-  }
+  // setSelectPicker() {
+  //   $('select.dropdown-select-field').selectpicker()
+  // }
 
   setBootstrapSwitch() {
     $('input.switch-field').bootstrapSwitch({
