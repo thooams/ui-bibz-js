@@ -8,6 +8,7 @@ export default class UiBibzJs {
 
   start(){
     document.addEventListener("turbolinks:load", this.init)
+    document.addEventListener("turbo:load", this.init)
   }
 
   init(){
