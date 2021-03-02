@@ -7,7 +7,7 @@ export default class UiBibzInterface {
     // this.dropdown()
     this.popover()
     this.notify()
-    // this.toast()
+    this.toast()
   }
 
   nav(){
