@@ -1,4 +1,7 @@
-import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min"
+// Import non minified version, later minifier will make sure minified version
+// is provided, while still allowing debugging to use the non minified version.
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle"
+
 export default class UiBibzInterface {
 
   constructor(node) {
