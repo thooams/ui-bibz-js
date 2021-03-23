@@ -117,11 +117,12 @@ export default class UiBibzForm {
   }
 
   doubleSlider(){
+    let me = this
     this.node.querySelectorAll(".slider").forEach(function(e){
       let slider = e
       let sliderId = slider.getAttribute("id")
-      let sliderMin = this.node.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-min span`)
-      let sliderMax = this.node.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-max span`)
+      let sliderMin = me.node.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-min span`)
+      let sliderMax = me.node.querySelector(`.slider-header[data-target=${sliderId}] .slider-header-max span`)
       let rangeInput1 = slider.querySelectorAll("input[type=range]")[0]
       let rangeInput2 = slider.querySelectorAll("input[type=range]")[1]
       let inverseLeft = slider.querySelector(".slider-inverse-left")
