@@ -37,7 +37,7 @@ export default class UiBibzForm {
   }
 
   setMultiSelect() {
-    $('.multi-select-field', this.node).each(function() {
+    $('select.multi-select-field', this.node).each(function() {
       var classes, data
       data = $(this).data()
       classes = $(this)[0].classList.value
