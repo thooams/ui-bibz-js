@@ -954,7 +954,7 @@ var FuzzySet = function(){}
                 $wrapper.append($checkboxLabel);
             }
             else {
-                var $checkboxLabel = $(`<label class="form-check-label" data-original-text="${labelContent}" />`);
+                var $checkboxLabel = $(`<label class="form-check-label"/>`);
                 $checkboxLabel.text(labelContent);
                 $wrapper.append($checkboxLabel);
             }
